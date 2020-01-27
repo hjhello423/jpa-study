@@ -30,3 +30,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+
+### my custom ###
+build
+out
+.gradle
