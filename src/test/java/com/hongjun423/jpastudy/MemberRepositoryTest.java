@@ -1,5 +1,6 @@
 package com.hongjun423.jpastudy;
 
+import com.hongjun423.jpastudy.domain.Member;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,5 +1,6 @@
 package com.hongjun423.jpastudy;
 
+import com.hongjun423.jpastudy.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
