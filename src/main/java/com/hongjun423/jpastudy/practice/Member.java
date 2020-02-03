@@ -12,7 +12,6 @@ public class Member {
 
     private String userName;
 
-    @ManyToOne
-    @JoinColumn(name = "team_id", insertable = false, updatable = false)
-    private Team team;
+    @OneToOne(mappedBy = "member")
+    private Locker locker;
 }
