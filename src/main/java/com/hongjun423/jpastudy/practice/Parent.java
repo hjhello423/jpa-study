@@ -1,13 +1,15 @@
 package com.hongjun423.jpastudy.practice;
 
-import javax.persistence.EmbeddedId;
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Parent {
 
-    @EmbeddedId
-    private ParentId id1;
+    @Id
+    @Column(name = "parent_id")
+    private String id1;
 
     private String name;
 }

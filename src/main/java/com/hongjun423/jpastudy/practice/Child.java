@@ -3,15 +3,17 @@ package com.hongjun423.jpastudy.practice;
 import javax.persistence.*;
 
 @Entity
+@IdClass(ChildId.class)
 public class Child {
 
     @Id
-    private String id;
-
     @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name = "parent_id1", referencedColumnName = "parent_id1"),
-            @JoinColumn(name = "parent_id2", referencedColumnName = "parent_id2")
-    })
+    @JoinColumn(name = "parent_id")
     private Parent parent;
+
+    @Id
+    @Column(name = "child_id")
+    private String childId;
+
+    private String name;
 }
