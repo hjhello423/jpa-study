@@ -9,11 +9,10 @@ import com.hongjun423.jpastudy.domain.item.Item;
 import com.hongjun423.jpastudy.repository.ItemRepository;
 import com.hongjun423.jpastudy.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.xml.ws.ServiceMode;
-
-@ServiceMode
+@Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
 public class OrderService {
@@ -47,8 +46,8 @@ public class OrderService {
 
     //취소
     @Transactional
-    public void candelOrder(Long orderid) {
-        //주문 엔티티 조히ㅗ
+    public void cancelOrder(Long orderid) {
+        //주문 엔티티 조회
         Order order = orderRepository.findOne(orderid);
         //주문 취소
         order.cancel();
